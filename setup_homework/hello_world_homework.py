@@ -2,12 +2,12 @@
 print('Hello world!\n')
 
 # Print personal info
-mySurname = 'Lutsenko'
-myName = 'Alona'
-myAge = 28
-myInfo = mySurname + ' ' + myName + ' ' + str(myAge)
-print('My personal info - ' + myInfo + '\n')
-print(" ".join([myName, mySurname]) + "\n")
+my_surname = 'Lutsenko'
+my_name = 'Alona'
+my_age = 28
+my_info = my_surname + ' ' + my_name + ' ' + str(my_age)
+print('My personal info - ' + my_info + '\n')
+print(" ".join([my_name, my_surname]) + "\n")
 
 # Print multiple strings
 multiple_string = '''First line: Never miss a good opportunity to shut up
@@ -17,5 +17,4 @@ Fourth line: Don't take life too seriously\n'''
 print(multiple_string)
 
 # Formatted Print
-print(f"Hi, my name is {myName} and I'm {myAge} years old.\n")
-
+print(f"Hi, my name is {my_name} and I'm {my_age} years old.\n")
