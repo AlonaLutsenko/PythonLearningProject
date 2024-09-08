@@ -1,3 +1,6 @@
+# Input: 3, 2, 1, 4, 5,  2
+# Output: [1, 2, 2, 3, 4, 5]
+
 numbers = 3, 2, 1, 4, 5,  2
 sorted_numbers = sorted(numbers)
 sorted_numbers_reverse = sorted(numbers, reverse=True)
