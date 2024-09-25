@@ -12,12 +12,3 @@ phone  = input("Enter your phone: ")
 contact_info = {"name": name, "age": age, "address": address, "phone": phone}
 
 print(f"Contact created: {contact_info}")
-
-
-
-
-
-
-# contact_info = {"name": "Alona", "age": 25, "address": "Lviv", "phone": "222222", "phone": "1111111"}
-#
-# print(f"Contact created: {contact_info}")
