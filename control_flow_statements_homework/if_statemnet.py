@@ -33,15 +33,15 @@ search_by_genre = input("Search by Genre (yes/no)? ").lower()
 if search_by_genre == 'yes':
     print("Available Genres:", list(GENRES.keys()))
 
-    genre = input("Enter genre: ").lower()
+    selected_genre = input("Enter genre: ").lower()
 
-    if genre in GENRES:
-        print("Available Movies:", GENRES[genre])
+    if selected_genre in GENRES:
+        print("Available Movies:", GENRES[selected_genre])
 
-        movie = input("Enter movie: ")
+        selected_movie = input("Enter movie: ")
 
-        if movie in GENRES[genre]:
-            print(f"Movie to watch: {movie}. Genre: {genre}.")
+        if selected_movie in GENRES[selected_genre]:
+            print(f"Movie to watch: {selected_movie}. Genre: {selected_genre}.")
         else:
             print("Sorry, this movie is not available in the selected genre.")
     else:
@@ -50,15 +50,15 @@ if search_by_genre == 'yes':
 elif input("Search by Actor (yes/no)? ").lower() == 'yes':
     print("Available Actors:", list(ACTORS.keys()))
 
-    actor = input("Enter actor: ")
+    selected_actor = input("Enter actor: ")
 
-    if actor in ACTORS:
-        print(f"Available movies: {ACTORS[actor]} with {actor}")
+    if selected_actor in ACTORS:
+        print(f"Available movies: {ACTORS[selected_actor]} with {selected_actor}")
 
-        movie = input("Enter movie: ")
+        selected_movie = input("Enter movie: ")
 
-        if movie in ACTORS[actor]:
-            print(f"Movie to watch: {movie}. Starring: {actor}.")
+        if selected_movie in ACTORS[selected_actor]:
+            print(f"Movie to watch: {selected_movie}. Starring: {selected_actor}.")
         else:
             print("Sorry, this movie is not available for the selected actor.")
     else:
