@@ -26,37 +26,37 @@ ACTORS = {
 def search_by_genre():
     while True:
         print("Available Genres:", list(GENRES.keys()))
-        genre = input("Enter genre: ").lower()
+        selected_genre = input("Enter genre: ").lower()
 
-        if genre in GENRES:
-            print("Available Movies:", GENRES[genre])
+        if selected_genre in GENRES:
+            print("Available Movies:", GENRES[selected_genre])
             while True:
-                movie = input("Enter movie: ")
-                if movie in GENRES[genre]:
-                    print(f"Movie to watch: {movie}. Genre: {genre}.")
+                selected_movie = input("Enter movie: ")
+                if selected_movie in GENRES[selected_genre]:
+                    print(f"Movie to watch: {selected_movie}. Genre: {selected_genre}.")
                     return
                 else:
-                    print(f"Movie {movie} not found. Please try again.")
+                    print(f"Movie {selected_movie} not found. Please try again.")
         else:
-            print(f"Genre {genre} not found. Please try again.")
+            print(f"Genre {selected_genre} not found. Please try again.")
 
 
 def search_by_actor():
     while True:
         print("Available Actors:", list(ACTORS.keys()))
-        actor = input("Enter actor: ")
+        selected_actor = input("Enter actor: ")
 
-        if actor in ACTORS:
-            print(f"Available movies: {ACTORS[actor]} with {actor}")
+        if selected_actor in ACTORS:
+            print(f"Available movies: {ACTORS[selected_actor]} with {selected_actor}")
             while True:
-                movie = input("Enter movie: ")
-                if movie in ACTORS[actor]:
-                    print(f"Movie to watch: {movie}. Starring: {actor}.")
+                selected_movie = input("Enter movie: ")
+                if selected_movie in ACTORS[selected_actor]:
+                    print(f"Movie to watch: {selected_movie}. Starring: {selected_actor}.")
                     return
                 else:
-                    print(f"Movie {movie} with actor {actor} not found. Please try again.")
+                    print(f"Movie {selected_movie} with actor {selected_actor} not found. Please try again.")
         else:
-            print(f"Actor {actor} not found. Please try again.")
+            print(f"Actor {selected_actor} not found. Please try again.")
 
 
 while True:
