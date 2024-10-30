@@ -7,22 +7,6 @@ GENRES = {
     'action': ['Mission Impossible']
 }
 
-# (!) ACTORS storage does not exist anymore.
-# ACTORS = {
-#     'Robert De Niro': ['Meet the Parents'],
-#     'Ben Stiller': ['Meet the Parents'],
-#     'Adam Sandler': ['Anger Management'],
-#     'Jack Nicholson': ['Anger Management'],
-#     'Brendan Fraser': ['Mummy'],
-#     'Rachel Weisz': ['Mummy'],
-#     'Tom Cruise': ['Vanilla Sky', 'Mission Impossible'],
-#     'Penelope Cruz': ['Vanilla Sky'],
-#     'Cameron Diaz': ['Vanilla Sky'],
-#     'Brad Pitt': ['Meet Joe Black'],
-#     'Anthony Hopkins': ['Meet Joe Black'],
-#     'Jeremy Renner': ['Mission Impossible']
-# }
-
 CAST = {
     'Meet the Parents': ['Robert De Niro', 'Ben Stiller'],
     'Anger Management': ['Adam Sandler', 'Jack Nicholson'],
@@ -59,19 +43,21 @@ elif search_by_genre == 'n':
         actor_list = []
         for actors in CAST.values():
             actor_list.extend(actors)
-        unique_actors = list(set(actor_list))
+        unique_actors = set(actor_list)
+
         print("Available Actors:")
-        for actor in sorted(unique_actors):
+        for actor in unique_actors:
             print(actor)
+
 
         selected_actor = input("Enter actor: ")
 
-        movies = []
+        movies_list = []
         for movie, actors in CAST.items():
             if selected_actor in actors:
-                movies.append(movie)
-        if movies:
-            print(f"Available movies with {selected_actor}: {', '.join(movies)}")
+                movies_list.append(movie)
+        if movies_list:
+            print(f"Available movies with {selected_actor}: {', '.join(movies_list)}")
         else:
             print(f"{selected_actor} not found.")
 
